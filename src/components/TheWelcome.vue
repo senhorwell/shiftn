@@ -5,6 +5,27 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app'
+import { getAnalytics } from 'firebase/analytics'
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: 'AIzaSyCRE73nb_zSDjdO-PfHf54qnasa3u0eliI',
+  authDomain: 'shiftn-institucional.firebaseapp.com',
+  projectId: 'shiftn-institucional',
+  storageBucket: 'shiftn-institucional.firebasestorage.app',
+  messagingSenderId: '292706390666',
+  appId: '1:292706390666:web:bb6864e9b36fecc1a85373',
+  measurementId: 'G-L8D67VBMZV',
+}
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig)
+const analytics = getAnalytics(app)
 
 const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
 </script>
